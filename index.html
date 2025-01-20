@@ -6,11 +6,12 @@
     <title>Document</title>
   </head>
   <body>
-    <input type="number" name="" id="number1" />
+    <input type="number" name="numb1" id="number1" />
     <input type="text" id="operator" />
-    <input type="number" name="" id="number2" />
-    <input type="button" value="" id="clearButton" />
-    <input type="button" value="" id="submitButton" />
+    <input type="number" name="numb1" id="number2" />
+    <input type="button" value="clear" id="clearButton" />
+    <input type="button" value="submit" id="submitButton" />
+    <p id="paragraf"></p>
   </body>
   <script>
     const numberOne = parseInt(document.getElementById("number1"));
@@ -18,11 +19,33 @@
     const op = document.getElementById("operator");
     const clear = document.getElementById("clearButton");
     const submit = document.getElementById("submitButton");
+    const p = document.getElementById("paragraf");
 
     function handleClick() {
+      let result;
       console.log("Strada");
+      op2 = op.value;
+      numb1 = numberOne;
+      numb2 = numberTwo;
+
+      switch (op2) {
+        case "+":
+          result = numb1 + numb2;
+          break;
+        case "-":
+          result = numb1 - numb2;
+          break;
+        case "/":
+          result = numb1 / numb2;
+          break;
+        case "*":
+          result = numb1 * numb2;
+          break;
+      }
+      console.log(op2);
+      console.log(result);
     }
 
-    reikinat = addEventListener("click", handleClick);
+    reikinat = submit.addEventListener("click", handleClick);
   </script>
 </html>
