@@ -22,12 +22,16 @@
     const p = document.getElementById("paragraf");
 
     function handleClick() {
-      let result;
       console.log("Strada");
       op2 = op.value;
       numb1 = numberOne;
       numb2 = numberTwo;
 
+      opCheck();
+    }
+
+    function opCheck(op2, numb1, numb2) {
+      let result;
       switch (op2) {
         case "+":
           result = numb1 + numb2;
@@ -42,6 +46,7 @@
           result = numb1 * numb2;
           break;
       }
+      p.innerHTML = result;
       console.log(op2);
       console.log(result);
     }
